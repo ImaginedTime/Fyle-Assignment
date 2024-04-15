@@ -19,30 +19,36 @@
             <div class="form-group">
                 <label for="grossIncome">
                     Enter Gross Annual Income
-                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark" data-toggle="tooltip"
+                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark"
+                        data-toggle="tooltip"
                         title="Gross annual income is your total salary in a year before any deductions">
                 </label>
-                <input type="text" class="form-control" id="grossIncome" required placeholder="Enter Gross Annual Income">
+                <input type="text" class="form-control" id="grossIncome" required
+                    placeholder="Enter Gross Annual Income">
                 <div class="error-icon" id="grossIncomeError">
-                    <img src="./assets/error-icon.svg" alt="Error Icon" data-toggle="tooltip" title="Please enter numbers only">
+                    <img src="./assets/error-icon.svg" alt="Error Icon" data-toggle="tooltip"
+                        title="Please enter numbers only">
                 </div>
             </div>
             <div class="form-group">
                 <label for="extraIncome">
                     Enter Extra Income
-                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark" data-toggle="tooltip"
+                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark"
+                        data-toggle="tooltip"
                         title="Extra income includes any additional income you earn apart from your salary">
                 </label>
-                <input type="text" class="form-control" id="extraIncome" placeholder="Enter extra income from other sources">
+                <input type="text" class="form-control" id="extraIncome"
+                    placeholder="Enter extra income from other sources">
                 <div class="error-icon" id="extraIncomeError">
-                    <img src="./assets/error-icon.svg" alt="Error Icon" data-toggle="tooltip" title="Please enter numbers only">
+                    <img src="./assets/error-icon.svg" alt="Error Icon" data-toggle="tooltip"
+                        title="Please enter numbers only">
                 </div>
             </div>
             <div class="form-group">
                 <label for="age">
                     Enter Age Group
-                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark" data-toggle="tooltip"
-                        title="Select your age group to calculate tax">
+                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark"
+                        data-toggle="tooltip" title="Select your age group to calculate tax">
                 </label>
                 <select class="form-control" id="age" required>
                     <option value="<40">&lt;40</option>
@@ -56,15 +62,17 @@
             <div class="form-group">
                 <label for="deductions">
                     Enter Total Applicable Deductions
-                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark" data-toggle="tooltip"
+                    <img src="./assets/question-mark.svg" alt="Question Mark" class="question-mark"
+                        data-toggle="tooltip"
                         title="Deductions are the expenses you can claim to reduce your taxable income">
                 </label>
                 <input type="text" class="form-control" id="deductions">
                 <div class="error-icon" id="deductionsError">
-                    <img src="./assets/error-icon.svg" alt="Error Icon">
+                    <img src="./assets/error-icon.svg" alt="Error Icon" data-toggle="tooltip"
+                    title="Please enter numbers only">
                 </div>
             </div>
-            
+
             <button type="submit" class="btn btn-primary">Calculate Tax</button>
         </form>
     </div>
@@ -79,11 +87,16 @@
                     <p class="modal-income"></p>
                     <p>after tax deductions</p>
 
-                    <button type="button" class="btn btn-primary modal-close-button" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    <button type="button" class="btn btn-primary modal-close-button" data-bs-dismiss="modal"
+                        aria-label="Close">Close</button>
                     <!-- <p class="modal-tax"></p> -->
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="tdnn">
+        <div class="moon"></div>
     </div>
 
     <!-- Include Bootstrap JS -->

@@ -1,11 +1,7 @@
-// script.js
-
 // Function to show error icon and tooltip
 function showErrorIcon(element, message) {
     var errorIcon = element.next('.error-icon');
     errorIcon.css('display', 'flex');
-    // errorIcon.attr('title', message);
-
 }
 
 // Function to hide error icon and tooltip
@@ -18,7 +14,6 @@ function hideErrorIcon(element) {
 function calculateTax(grossIncome, extraIncome, deductions, age) {
     var totalIncome = grossIncome + extraIncome - deductions;
 
-    console.log(totalIncome)
     var tax = 0;
 
     if (totalIncome > 800000) {
@@ -57,9 +52,8 @@ $(document).ready(function () {
         var isValid = true;
 
         // Validate gross income
-        if (isNaN(grossIncome)) {
+        if (isNaN(grossIncome) || grossIncome < 0) {
             showErrorIcon($('#grossIncome'), 'Please enter a valid gross income.');
-            console.log("Error in gross income")
             isValid = false;
         } else {
             hideErrorIcon($('#grossIncome'));
@@ -68,7 +62,6 @@ $(document).ready(function () {
         // Validate age
         if (age === '') {
             showErrorIcon($('#age'), 'Please select an age.');
-            console.log("Error in age")
             isValid = false;
         } else {
             hideErrorIcon($('#age'));
@@ -92,6 +85,12 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
+});
+
+$('.tdnn').click(function () {
+    $("body").toggleClass('light');
+    $(".moon").toggleClass('sun');
+    $(".tdnn").toggleClass('day');
 });
