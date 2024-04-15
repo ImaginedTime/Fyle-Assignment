@@ -30,6 +30,11 @@ function calculateTax(grossIncome, extraIncome, deductions, age) {
 }
 
 $(document).ready(function () {
+    // initialize tooltip
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
     // check for validity of each input field which is a text type, whether it contains a valid number or not
     $('input[type="text"]').on('input', function () {
         var value = $(this).val();
@@ -72,7 +77,7 @@ $(document).ready(function () {
             var tax = calculateTax(grossIncome, extraIncome, deductions, age);
 
             var income = grossIncome + extraIncome - deductions - tax;
-            
+
             $('.modal-income').html(`${income.toFixed(2)}`);
             $('.modal-tax').html(`${tax.toFixed(2)}`);
 
@@ -82,11 +87,7 @@ $(document).ready(function () {
     });
 });
 
-
-$(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-});
-
+// for dark and light mode
 $('.tdnn').click(function () {
     $("body").toggleClass('light');
     $(".moon").toggleClass('sun');

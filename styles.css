@@ -1,7 +1,30 @@
+:root {
+    --darkbg: #251D29;
+    --darkt: #eee;
+    --lightbg: #fff;
+    --lightt: #111;
+
+    --toggleHeight: 16em;
+    --toggleWidth: 30em;
+    --toggleBtnRadius: 10em;
+
+    --bgColor--night: #423966;
+    --toggleBtn-bgColor--night: var(--bgColor--night);
+    --mooncolor: #D9FBFF;
+    --bgColor--day: #9ee3fb;
+    --toggleBtn-bgColor--day: var(--bgColor--day);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    transition: all .2s ease-in-out;
+    background: var(--darkbg);
+    color: var(--darkt);
 }
 
 .container {
@@ -86,28 +109,6 @@ form .btn {
 
 
 /* the dark mode toggle button */
-:root {
-    --darkbg: #251D29;
-    --darkt: #eee;
-    --lightbg: #fff;
-    --lightt: #111;
-
-    --toggleHeight: 16em;
-    --toggleWidth: 30em;
-    --toggleBtnRadius: 10em;
-
-    --bgColor--night: #423966;
-    --toggleBtn-bgColor--night: var(--bgColor--night);
-    --mooncolor: #D9FBFF;
-    --bgColor--day: #9ee3fb;
-    --toggleBtn-bgColor--day: var(--bgColor--day);
-}
-
-body {
-    transition: all .2s ease-in-out;
-    background: var(--darkbg);
-    color: var(--darkt);
-}
 
 .light {
     background: var(--lightbg);
