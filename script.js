@@ -72,9 +72,7 @@ $(document).ready(function () {
             var tax = calculateTax(grossIncome, extraIncome, deductions, age);
 
             var income = grossIncome + extraIncome - deductions - tax;
-
-            console.log(income);
-            console.log(tax);
+            
             $('.modal-income').html(`${income.toFixed(2)}`);
             $('.modal-tax').html(`${tax.toFixed(2)}`);
 
